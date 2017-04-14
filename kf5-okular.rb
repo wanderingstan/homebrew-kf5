@@ -6,30 +6,30 @@ class Kf5Okular < Formula
   head "git://anongit.kde.org/okular.git"
 
   depends_on "cmake" => :build
-  depends_on "haraldf/kf5/kf5-extra-cmake-modules" => :build
+  depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
   depends_on "qt5"
 
   depends_on "zlib"
   depends_on "freetype"
 
-  depends_on "haraldf/kf5/kf5-kactivities"
-  depends_on "haraldf/kf5/kf5-karchive"
-  depends_on "haraldf/kf5/kf5-kbookmarks"
-  depends_on "haraldf/kf5/kf5-kcompletion"
-  depends_on "haraldf/kf5/kf5-kconfig"
-  depends_on "haraldf/kf5/kf5-kconfigwidgets"
-  depends_on "haraldf/kf5/kf5-kcoreaddons"
-  depends_on "haraldf/kf5/kf5-kdbusaddons"
-  depends_on "haraldf/kf5/kf5-kdoctools"
-  depends_on "haraldf/kf5/kf5-khtml"
-  depends_on "haraldf/kf5/kf5-kiconthemes"
-  depends_on "haraldf/kf5/kf5-kio"
-  depends_on "haraldf/kf5/kf5-kjs"
-  depends_on "haraldf/kf5/kf5-kparts"
-  depends_on "haraldf/kf5/kf5-kpty"
-  depends_on "haraldf/kf5/kf5-threadweaver"
-  depends_on "haraldf/kf5/kf5-kwallet"
-  depends_on "haraldf/kf5/kf5-kwindowsystem"
+  depends_on "chigraph/kf5/kf5-kactivities"
+  depends_on "chigraph/kf5/kf5-karchive"
+  depends_on "chigraph/kf5/kf5-kbookmarks"
+  depends_on "chigraph/kf5/kf5-kcompletion"
+  depends_on "chigraph/kf5/kf5-kconfig"
+  depends_on "chigraph/kf5/kf5-kconfigwidgets"
+  depends_on "chigraph/kf5/kf5-kcoreaddons"
+  depends_on "chigraph/kf5/kf5-kdbusaddons"
+  depends_on "chigraph/kf5/kf5-kdoctools"
+  depends_on "chigraph/kf5/kf5-khtml"
+  depends_on "chigraph/kf5/kf5-kiconthemes"
+  depends_on "chigraph/kf5/kf5-kio"
+  depends_on "chigraph/kf5/kf5-kjs"
+  depends_on "chigraph/kf5/kf5-kparts"
+  depends_on "chigraph/kf5/kf5-kpty"
+  depends_on "chigraph/kf5/kf5-threadweaver"
+  depends_on "chigraph/kf5/kf5-kwallet"
+  depends_on "chigraph/kf5/kf5-kwindowsystem"
 
   def patches
     DATA

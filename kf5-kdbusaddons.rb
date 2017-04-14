@@ -8,7 +8,7 @@ class Kf5Kdbusaddons < Formula
   head 'git://anongit.kde.org/kdbusaddons.git'
 
   depends_on "cmake" => :build
-  depends_on "haraldf/kf5/kf5-extra-cmake-modules" => :build
+  depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
   depends_on "qt5"
   depends_on "shared-mime-info"
   depends_on "d-bus"

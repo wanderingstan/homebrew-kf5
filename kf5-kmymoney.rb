@@ -5,14 +5,14 @@ class Kf5Kmymoney < Formula
   head "git://anongit.kde.org/kmymoney.git", :branch => "frameworks"
 
   depends_on "cmake" => :build
-  depends_on "haraldf/kf5/kf5-extra-cmake-modules" => :build
+  depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
   depends_on "qt5"
 
-  depends_on "haraldf/kf5/kf5-alkimia"
-  depends_on "haraldf/kf5/kf5-kdiagram"
-  depends_on "haraldf/kf5/kf5-kcmutils"
-  depends_on "haraldf/kf5/kf5-khtml"
-  depends_on "haraldf/kf5/kf5-kdelibs4support"
+  depends_on "chigraph/kf5/kf5-alkimia"
+  depends_on "chigraph/kf5/kf5-kdiagram"
+  depends_on "chigraph/kf5/kf5-kcmutils"
+  depends_on "chigraph/kf5/kf5-khtml"
+  depends_on "chigraph/kf5/kf5-kdelibs4support"
 
   def patches
     DATA

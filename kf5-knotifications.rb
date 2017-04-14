@@ -8,12 +8,12 @@ class Kf5Knotifications < Formula
   head 'git://anongit.kde.org/knotifications.git'
 
   depends_on "cmake" => :build
-  depends_on "haraldf/kf5/kf5-extra-cmake-modules" => :build
+  depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
   depends_on "qt5"
 
-  depends_on "haraldf/kf5/kf5-kiconthemes"
-  depends_on "haraldf/kf5/kf5-kservice"
-  depends_on "haraldf/kf5/kf5-phonon"
+  depends_on "chigraph/kf5/kf5-kiconthemes"
+  depends_on "chigraph/kf5/kf5-kservice"
+  depends_on "chigraph/kf5/kf5-phonon"
 
   bottle do
     root_url "https://dl.chigraph.io/dependencies/darwin/brew"

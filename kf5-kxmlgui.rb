@@ -8,10 +8,10 @@ class Kf5Kxmlgui < Formula
   head 'git://anongit.kde.org/kxmlgui.git'
 
   depends_on "cmake" => :build
-  depends_on "haraldf/kf5/kf5-extra-cmake-modules" => :build
-  depends_on "haraldf/kf5/kf5-kglobalaccel"
-  depends_on "haraldf/kf5/kf5-ktextwidgets"
-  depends_on "haraldf/kf5/kf5-attica"
+  depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
+  depends_on "chigraph/kf5/kf5-kglobalaccel"
+  depends_on "chigraph/kf5/kf5-ktextwidgets"
+  depends_on "chigraph/kf5/kf5-attica"
   depends_on "qt5"
 
   bottle do

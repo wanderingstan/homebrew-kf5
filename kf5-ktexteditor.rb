@@ -8,10 +8,10 @@ class Kf5Ktexteditor < Formula
   head 'git://anongit.kde.org/ktexteditor.git'
 
   depends_on "cmake" => :build
-  depends_on "haraldf/kf5/kf5-extra-cmake-modules" => :build
+  depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
   depends_on "qt5"
-  depends_on "haraldf/kf5/kf5-kparts"
-  depends_on "haraldf/kf5/kf5-syntax-highlighting"
+  depends_on "chigraph/kf5/kf5-kparts"
+  depends_on "chigraph/kf5/kf5-syntax-highlighting"
 
   bottle do
     root_url "https://dl.chigraph.io/dependencies/darwin/brew"

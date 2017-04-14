@@ -10,13 +10,13 @@ class Kf5Kservice < Formula
   depends_on "cmake" => :build
   # The bison 2.3 in Mac OS X is too old to build. Use homebrew's instead
   depends_on "bison" => :build
-  depends_on "haraldf/kf5/kf5-extra-cmake-modules" => :build
+  depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
   depends_on "qt5"
-  depends_on "haraldf/kf5/kf5-kcrash"
-  depends_on "haraldf/kf5/kf5-kdoctools" => :build
-  depends_on "haraldf/kf5/kf5-kdbusaddons"
-  depends_on "haraldf/kf5/kf5-kconfig"
-  depends_on "haraldf/kf5/kf5-ki18n"
+  depends_on "chigraph/kf5/kf5-kcrash"
+  depends_on "chigraph/kf5/kf5-kdoctools" => :build
+  depends_on "chigraph/kf5/kf5-kdbusaddons"
+  depends_on "chigraph/kf5/kf5-kconfig"
+  depends_on "chigraph/kf5/kf5-ki18n"
 
   bottle do
     root_url "https://dl.chigraph.io/dependencies/darwin/brew"

@@ -8,7 +8,7 @@ class Kf5Kcoreaddons < Formula
   head 'git://anongit.kde.org/kcoreaddons.git'
 
   depends_on "cmake" => :build
-  depends_on "haraldf/kf5/kf5-extra-cmake-modules" => :build
+  depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
   depends_on "qt5"
   depends_on "shared-mime-info"
 

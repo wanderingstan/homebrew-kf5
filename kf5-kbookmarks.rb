@@ -8,8 +8,8 @@ class Kf5Kbookmarks < Formula
   head 'git://anongit.kde.org/kbookmarks.git'
 
   depends_on "cmake" => :build
-  depends_on "haraldf/kf5/kf5-extra-cmake-modules" => :build
-  depends_on "haraldf/kf5/kf5-kxmlgui"
+  depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
+  depends_on "chigraph/kf5/kf5-kxmlgui"
   depends_on "qt5"
 
   bottle do

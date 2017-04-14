@@ -10,10 +10,10 @@ class Kf5Kpty < Formula
   depends_on "cmake" => :build
   depends_on "qt5"
   depends_on "gettext" => :build
-  depends_on "haraldf/kf5/kf5-extra-cmake-modules" => :build
-  depends_on "haraldf/kf5/kf5-kcoreaddons" => :build
-  depends_on "haraldf/kf5/kf5-kjs" => :build
-  depends_on "haraldf/kf5/kf5-ki18n" => :build
+  depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
+  depends_on "chigraph/kf5/kf5-kcoreaddons" => :build
+  depends_on "chigraph/kf5/kf5-kjs" => :build
+  depends_on "chigraph/kf5/kf5-ki18n" => :build
 
   def install
     args = std_cmake_args

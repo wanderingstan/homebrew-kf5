@@ -10,14 +10,14 @@ class Kf5Kio < Formula
   option "without-kiowidgets", "Builds only KIO core"
 
   depends_on "cmake" => :build
-  depends_on "haraldf/kf5/kf5-extra-cmake-modules" => :build
+  depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
   depends_on "qt5"
-  depends_on "haraldf/kf5/kf5-karchive"
-  depends_on "haraldf/kf5/kf5-kbookmarks" if not build.without? "kiowidgets"
-  depends_on "haraldf/kf5/kf5-kjobwidgets" if not build.without? "kiowidgets"
-  depends_on "haraldf/kf5/kf5-kwallet" if not build.without? "kiowidgets"
-  depends_on "haraldf/kf5/kf5-solid"
-  depends_on "haraldf/kf5/kf5-kservice"
+  depends_on "chigraph/kf5/kf5-karchive"
+  depends_on "chigraph/kf5/kf5-kbookmarks" if not build.without? "kiowidgets"
+  depends_on "chigraph/kf5/kf5-kjobwidgets" if not build.without? "kiowidgets"
+  depends_on "chigraph/kf5/kf5-kwallet" if not build.without? "kiowidgets"
+  depends_on "chigraph/kf5/kf5-solid"
+  depends_on "chigraph/kf5/kf5-kservice"
 
   bottle do
     root_url "https://dl.chigraph.io/dependencies/darwin/brew"

@@ -8,16 +8,16 @@ class Kf5Kconfigwidgets < Formula
   head 'git://anongit.kde.org/kconfigwidgets.git'
 
   depends_on "cmake" => :build
-  depends_on "haraldf/kf5/kf5-extra-cmake-modules" => :build
-  depends_on "haraldf/kf5/kf5-kdoctools" => :build
+  depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
+  depends_on "chigraph/kf5/kf5-kdoctools" => :build
   depends_on "qt5"
-  depends_on "haraldf/kf5/kf5-kauth"
-  depends_on "haraldf/kf5/kf5-kcoreaddons"
-  depends_on "haraldf/kf5/kf5-kcodecs"
-  depends_on "haraldf/kf5/kf5-kconfig"
-  depends_on "haraldf/kf5/kf5-kguiaddons"
-  depends_on "haraldf/kf5/kf5-kwidgetsaddons"
-  depends_on "haraldf/kf5/kf5-ki18n"
+  depends_on "chigraph/kf5/kf5-kauth"
+  depends_on "chigraph/kf5/kf5-kcoreaddons"
+  depends_on "chigraph/kf5/kf5-kcodecs"
+  depends_on "chigraph/kf5/kf5-kconfig"
+  depends_on "chigraph/kf5/kf5-kguiaddons"
+  depends_on "chigraph/kf5/kf5-kwidgetsaddons"
+  depends_on "chigraph/kf5/kf5-ki18n"
 
   bottle do
     root_url "https://dl.chigraph.io/dependencies/darwin/brew"

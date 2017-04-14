@@ -8,7 +8,7 @@ class Kf5Kcodecs < Formula
   head 'git://anongit.kde.org/kcodecs.git'
 
   depends_on "cmake" => :build
-  depends_on "haraldf/kf5/kf5-extra-cmake-modules" => :build
+  depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
   depends_on "qt5"
 
   bottle do

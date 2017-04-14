@@ -10,9 +10,9 @@ class Kf5Kwallet < Formula
   depends_on "libgcrypt"
 
   depends_on "cmake" => :build
-  depends_on "haraldf/kf5/kf5-extra-cmake-modules" => :build
+  depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
   depends_on "qt5"
-  depends_on "haraldf/kf5/kf5-knotifications"
+  depends_on "chigraph/kf5/kf5-knotifications"
 
   bottle do
     root_url "https://dl.chigraph.io/dependencies/darwin/brew"

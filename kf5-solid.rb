@@ -10,7 +10,7 @@ class Kf5Solid < Formula
   depends_on "cmake" => :build
   # The bison 2.3 in Mac OS X is too old to build. Use homebrew's instead
   depends_on "bison" => :build
-  depends_on "haraldf/kf5/kf5-extra-cmake-modules" => :build
+  depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
   depends_on "qt5"
 
   bottle do
