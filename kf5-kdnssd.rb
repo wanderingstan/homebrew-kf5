@@ -11,6 +11,11 @@ class Kf5Kdnssd < Formula
   depends_on "haraldf/kf5/kf5-extra-cmake-modules" => :build
   depends_on "qt5"
 
+  bottle do
+    root_url "https://dl.chigraph.io/dependencies/darwin/brew"
+    sha256 "496efce5087e3df6520aaa9d953874c2f227a85d59db69325b6e2e05bd974bd5" => :sierra
+  end
+
   def install
     args = std_cmake_args
 

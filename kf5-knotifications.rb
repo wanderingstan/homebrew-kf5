@@ -15,6 +15,11 @@ class Kf5Knotifications < Formula
   depends_on "haraldf/kf5/kf5-kservice"
   depends_on "haraldf/kf5/kf5-phonon"
 
+  bottle do
+    root_url "https://dl.chigraph.io/dependencies/darwin/brew"
+    sha256 "cd08e0cb88536be1b378e1bd4a63b21ae8c989fd538736cbc8c0b8611b5db73b" => :sierra
+  end
+
   def install
     args = std_cmake_args
 

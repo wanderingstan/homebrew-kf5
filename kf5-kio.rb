@@ -19,6 +19,11 @@ class Kf5Kio < Formula
   depends_on "haraldf/kf5/kf5-solid"
   depends_on "haraldf/kf5/kf5-kservice"
 
+  bottle do
+    root_url "https://dl.chigraph.io/dependencies/darwin/brew"
+    sha256 "13334cf6bd9c7eafa7a5d72fa7770445b005a2ce1ffa9e03c7ae94d829d2810e" => :sierra
+  end
+
   def install
     args = std_cmake_args
     args << "-DKIOCORE_ONLY=ON" if build.without? "kiowidgets"

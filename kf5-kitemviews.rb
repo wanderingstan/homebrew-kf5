@@ -11,6 +11,11 @@ class Kf5Kitemviews < Formula
   depends_on "haraldf/kf5/kf5-extra-cmake-modules" => :build
   depends_on "qt5"
 
+  bottle do
+    root_url "https://dl.chigraph.io/dependencies/darwin/brew"
+    sha256 "8e1af808f05da4de639fa945576e57f688ca336b8bce8510d63554bde296d4c4" => :sierra
+  end
+
   def install
     args = std_cmake_args
 

@@ -13,6 +13,11 @@ class Kf5Kjobwidgets < Formula
   depends_on "haraldf/kf5/kf5-kwidgetsaddons"
   depends_on "qt5"
 
+  bottle do
+    root_url "https://dl.chigraph.io/dependencies/darwin/brew"
+    sha256 "8983acedb15abab5195e8007d348b3eafde10d198cb0eb99738c1955779d52f3" => :sierra
+  end
+
   def install
     args = std_cmake_args
 

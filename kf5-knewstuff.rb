@@ -13,6 +13,11 @@ class Kf5Knewstuff < Formula
 
   depends_on "haraldf/kf5/kf5-kio"
 
+  bottle do
+    root_url "https://dl.chigraph.io/dependencies/darwin/brew"
+    sha256 "9579e0d3e99276bcad39a63247fa1cb943dc0bdbf51b3b03942c784e7eec9a5a" => :sierra
+  end
+
   def install
     args = std_cmake_args
 

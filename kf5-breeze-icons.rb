@@ -10,6 +10,11 @@ class Kf5BreezeIcons < Formula
   depends_on "cmake" => :build
   depends_on "qt5"
 
+  bottle do
+    root_url "https://dl.chigraph.io/dependencies/darwin/brew"
+    sha256 "99c168eb01dcd0af5524f720beea4eee33e743d87b3c9eb03383b19ff0631cf5" => :sierra
+  end
+
   def install
     args = std_cmake_args
     args << "-DBINARY_ICONS_RESOURCE=TRUE"

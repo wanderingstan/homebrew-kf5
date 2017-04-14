@@ -12,6 +12,11 @@ class Kf5Kinit < Formula
   depends_on "qt5"
   depends_on "haraldf/kf5/kf5-kio"
 
+  bottle do
+    root_url "https://dl.chigraph.io/dependencies/darwin/brew"
+    sha256 "45954b164085363bf957b5e700547d7a7366b4837bdaefc747e4496ca92fa447" => :sierra
+  end
+
   def install
     args = std_cmake_args
 

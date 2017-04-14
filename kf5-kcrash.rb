@@ -14,6 +14,11 @@ class Kf5Kcrash < Formula
   depends_on "haraldf/kf5/kf5-kwindowsystem"
   depends_on "haraldf/kf5/kf5-kcoreaddons"
 
+  bottle do
+    root_url "https://dl.chigraph.io/dependencies/darwin/brew"
+    sha256 "a456181fa709bd9ac8802c7cd461bfeac0cd90e15d8dd4e73ad51f7fbc67dad4" => :sierra
+  end
+
   def install
     args = std_cmake_args
 
