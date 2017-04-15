@@ -2,8 +2,8 @@ require "formula"
 
 class Kf5BreezeIcons < Formula
   homepage "http://www.kde.org/"
-  url "http://download.kde.org/stable/frameworks/5.25/breeze-icons-5.25.0.tar.xz"
-  sha256 "e274c7f5c71c177e2e9d8ced9c49cd052ec2f726cb693c7df73e96af12277e8f"
+  url "http://download.kde.org/stable/frameworks/5.32/breeze-icons-5.32.0.tar.xz"
+  sha256 "23a3a0b7f25736f1b5169d958de11b9fe2ad1e9e649e08bd283b81f9a19aa1d8"
 
   head 'git://anongit.kde.org/breeze-icons.git'
 
@@ -12,7 +12,7 @@ class Kf5BreezeIcons < Formula
 
   bottle do
     root_url "https://dl.chigraph.io/dependencies/darwin/brew"
-    sha256 "99c168eb01dcd0af5524f720beea4eee33e743d87b3c9eb03383b19ff0631cf5" => :sierra
+    sha256 "486ec2f7d8926e98e78d79d4ce1e81805fb9920ecd15b2a9a4c390a1c3a15656" => :sierra
   end
 
   def install
