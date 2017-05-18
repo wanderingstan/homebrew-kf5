@@ -29,9 +29,9 @@ class Kf5Konversation < Formula
   depends_on "chigraph/kf5/kf5-kwidgetsaddons"
   depends_on "chigraph/kf5/kf5-kglobalaccel"
 
- # def patches
- #   DATA
- # end
+  # def patches
+  #   DATA
+  # end
 
   def install
     args = std_cmake_args
