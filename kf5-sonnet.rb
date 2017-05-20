@@ -19,7 +19,7 @@ class Kf5Sonnet < Formula
   def install
     args = std_cmake_args
 
-    system "cmake", ".", *args
+    system "cmake", ".", "-DCMAKE_CXX_FLAGS=-fexception", *args
     system "make", "install"
     prefix.install "install_manifest.txt"
   end
