@@ -26,16 +26,16 @@ class Kf5Sonnet < Formula
 end
 
 __END__
-diff --git a/src/ui/CMakeLists.txt b/src/ui/CMakeLists.txt
-index def7863..dff4665 100644
---- a/src/ui/CMakeLists.txt
-+++ b/src/ui/CMakeLists.txt
-@@ -40,6 +40,8 @@ ecm_generate_headers(SonnetUi_CamelCase_HEADERS
-   REQUIRED_HEADERS SonnetUi_HEADERS
- )
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index b176805..e9d21c3 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -16,6 +16,8 @@ include(KDEInstallDirs)
+ include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
+ include(KDECMakeSettings)
  
-+add_compile_options(-fexceptions)
++kde_enable_exceptions()
 +
- qt5_wrap_ui(sonnetui_SRCS ${sonnetui_UI})
+ set(REQUIRED_QT_VERSION 5.6.0)
+ find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets)
  
- add_library(KF5SonnetUi ${sonnetui_SRCS})
