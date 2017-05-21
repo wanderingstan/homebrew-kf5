@@ -19,8 +19,23 @@ class Kf5Sonnet < Formula
   def install
     args = std_cmake_args
 
-    system "cmake", ".", "-DCMAKE_CXX_FLAGS=-fexceptions", *args
+    system "cmake", ".", *args
     system "make", "install"
     prefix.install "install_manifest.txt"
   end
 end
+
+__END__
+diff --git a/src/ui/CMakeLists.txt b/src/ui/CMakeLists.txt
+index def7863..dff4665 100644
+--- a/src/ui/CMakeLists.txt
++++ b/src/ui/CMakeLists.txt
+@@ -40,6 +40,8 @@ ecm_generate_headers(SonnetUi_CamelCase_HEADERS
+   REQUIRED_HEADERS SonnetUi_HEADERS
+ )
+ 
++add_compile_options(-fexceptions)
++
+ qt5_wrap_ui(sonnetui_SRCS ${sonnetui_UI})
+ 
+ add_library(KF5SonnetUi ${sonnetui_SRCS})
