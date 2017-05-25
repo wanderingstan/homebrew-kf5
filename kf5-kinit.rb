@@ -17,6 +17,8 @@ class Kf5Kinit < Formula
     sha256 "45954b164085363bf957b5e700547d7a7366b4837bdaefc747e4496ca92fa447" => :sierra
   end
 
+  patch :DATA
+
   def install
     args = std_cmake_args
 
@@ -29,3 +31,17 @@ class Kf5Kinit < Formula
     prefix.install "install_manifest.txt"
   end
 end
+
+__END__
+diff --git a/src/kdeinit/CMakeLists.txt b/src/kdeinit/CMakeLists.txt
+index f00dd77..6c5f593 100644
+--- a/src/kdeinit/CMakeLists.txt
++++ b/src/kdeinit/CMakeLists.txt
+@@ -3,6 +3,7 @@ if (WIN32)
+   set(kdeinit_LIBS psapi)
+ elseif (APPLE)
+   set(kdeinit_SRCS kinit.cpp kinit_mac.mm proctitle.cpp ../klauncher_cmds.cpp )
++  set_source_files_properties(kinit_mac.mm PROPERTIES COMPILE_DEFINITIONS QT_NO_EXCEPTIONS)
+   set(kdeinit_LIBS "")
+ else ()
+   set(kdeinit_SRCS kinit.cpp proctitle.cpp ../klauncher_cmds.cpp )
