@@ -8,6 +8,8 @@ class Kf5Kdoctools < Formula
   head "git://anongit.kde.org/kdoctools.git"
 
   depends_on "cmake" => :build
+  depends_on "perl" => :build
+  depends_on "cpanminus" => :build
   depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
   depends_on "chigraph/kf5/kf5-karchive"
   depends_on "qt5"
@@ -25,6 +27,9 @@ class Kf5Kdoctools < Formula
   end
 
   def install
+
+    system "cpanm", "URI"
+
     args = std_cmake_args
 
     args << "-DDocBookXML_CURRENTDTD_DIR:PATH=#{Formulary.factory("docbook").prefix}/docbook/xml/4.2"
