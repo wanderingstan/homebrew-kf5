@@ -12,6 +12,7 @@ my %frameworks = (
     'extra-cmake-modules' => '',
     ### Tier 1
     'attica' => '',
+    'breeze-icons' => '',
     'kapidox' => '',
     'karchive' => '',
     'kcodecs' => '',
@@ -63,6 +64,7 @@ my %frameworks = (
     'kparts' => '',
     'kservice' => '',
     'ktexteditor' => '',
+    'syntax-highlighting' => '',
     'ktextwidgets' => '',
     'kwallet' => '',
     'kxmlgui' => '',
