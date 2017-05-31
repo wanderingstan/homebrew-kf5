@@ -8,6 +8,8 @@ class Kf5Kdelibs4support < Formula
   head "git://anongit.kde.org/kdelibs4support.git"
 
   depends_on "cmake" => :build
+  depends_on "perl" => :build
+  depends_on "cpanminus" => :build
   depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
   depends_on "chigraph/kf5/kf5-kded"
   depends_on "chigraph/kf5/kf5-kdoctools" => :build
@@ -20,6 +22,9 @@ class Kf5Kdelibs4support < Formula
   depends_on "chigraph/kf5/kf5-kparts"
 
   def install
+
+    system "cpanm", "URI"
+
     args = std_cmake_args
 
     system "cmake", ".", *args
