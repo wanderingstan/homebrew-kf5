@@ -16,6 +16,9 @@ class Kf5Sonnet < Formula
     sha256 "3a760e8fa8190336e728c836e33ddbc54909b24b9631397eec66fbddee0e4902" => :sierra
   end
 
+  # TODO: figure out how to properly fix https://github.com/haraldF/homebrew-kf5/issues/72
+  conflicts_with "hunspell"
+
   patch :DATA
 
   def install
