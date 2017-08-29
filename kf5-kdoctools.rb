@@ -27,7 +27,7 @@ class Kf5Kdoctools < Formula
   end
 
   def install
-    system "cpanm", "URI"
+    # system "cpanm", "URI"
 
     args = std_cmake_args
 
@@ -41,6 +41,9 @@ class Kf5Kdoctools < Formula
   end
 
   def caveats; <<-EOS.undent
+    Before install of this formula you need to run:
+      cpanm URI
+
     You need to take some manual steps in order to make this formula work:
       ln -sf "#{share}/kf5" "~/Library/Application Support/"
     EOS
