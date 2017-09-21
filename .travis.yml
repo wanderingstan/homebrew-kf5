@@ -1,5 +1,6 @@
 language: ruby
 os: osx
+osx_image: xcode9
 rvm: system
 
 before_install:
@@ -8,4 +9,4 @@ before_install:
 install:
   - brew tap chigraph/kf5 file://$PWD
 script:
-  - brew install chigraph/kf5/kf5-karchive
+  - ./tools/ci.sh
