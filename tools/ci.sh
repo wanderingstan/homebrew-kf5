@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 [[ -f "/tmp/kf5_dep_map" ]] && rm /tmp/kf5_dep_map
 
@@ -10,11 +10,14 @@ done
 
 tsort /tmp/kf5_dep_map > /tmp/kf5_install_order
 
-for formula in `cat /tmp/kf5_install_order | grep -v kf5`; do
-  brew install "$@" "${formula}"
+for deps in `cat /tmp/kf5_install_order | grep -v kf5`; do
+  brew install "$@" "${deps}"
 done
 
 for formula in `cat /tmp/kf5_install_order | grep kf5`; do
   brew install --build-bottle "$@" "${formula}"
+  if [ "$formula" == "kf5-kcoreaddons" ]; then
+    brew link --overwrite "$@" "${formula}"
+  fi
   brew bottle "$@" "${formula}"
 done
