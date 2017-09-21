@@ -14,7 +14,7 @@ class Kf5Ki18n < Formula
 
   bottle do
     root_url "https://dl.chigraph.io/dependencies/darwin/brew"
-    sha256 "25c2397cb13e0ea657ceb8d57e070813a4d0f3d11558b442d9a30c1f997a3c74" => :sierra'
+    sha256 "25c2397cb13e0ea657ceb8d57e070813a4d0f3d11558b442d9a30c1f997a3c74" => :sierra
   end
 
   def install
