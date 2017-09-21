@@ -15,6 +15,9 @@ for deps in `cat /tmp/kf5_install_order | grep -v kf5`; do
 done
 
 for formula in `cat /tmp/kf5_install_order | grep kf5`; do
+  if [ "$formula" == "kf5-kdoctools" ]; then
+    cpanm URI
+  fi
   brew install --build-bottle "$@" "${formula}"
   if [ "$formula" == "kf5-kcoreaddons" ]; then
     brew link --overwrite "$@" "${formula}"
