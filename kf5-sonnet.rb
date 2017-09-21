@@ -19,8 +19,6 @@ class Kf5Sonnet < Formula
   # TODO: figure out how to properly fix https://github.com/haraldF/homebrew-kf5/issues/72
   conflicts_with "hunspell"
 
-  patch :DATA
-
   def install
     args = std_cmake_args
 
@@ -29,18 +27,3 @@ class Kf5Sonnet < Formula
     prefix.install "install_manifest.txt"
   end
 end
-
-__END__
-diff --git a/CMakeLists.txt b/CMakeLists.txt
-index b176805..e9d21c3 100644
---- a/CMakeLists.txt
-+++ b/CMakeLists.txt
-@@ -16,6 +16,8 @@ include(KDEInstallDirs)
- include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
- include(KDECMakeSettings)
- 
-+kde_enable_exceptions()
-+
- set(REQUIRED_QT_VERSION 5.6.0)
- find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets)
- 
