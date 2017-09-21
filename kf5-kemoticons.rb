@@ -9,7 +9,7 @@ class Kf5Kemoticons < Formula
 
   depends_on "cmake" => :build
   depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
-  depends_on "qt5"
+  depends_on "qt"
 
   depends_on "chigraph/kf5/kf5-karchive"
   depends_on "chigraph/kf5/kf5-kservice"

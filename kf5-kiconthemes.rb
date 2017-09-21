@@ -11,7 +11,7 @@ class Kf5Kiconthemes < Formula
   depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
   depends_on "chigraph/kf5/kf5-kconfigwidgets"
   depends_on "chigraph/kf5/kf5-kitemviews"
-  depends_on "qt5"
+  depends_on "qt"
 
   bottle do
     root_url "https://dl.chigraph.io/dependencies/darwin/brew"

@@ -13,7 +13,7 @@ class Kf5Ktextwidgets < Formula
   depends_on "chigraph/kf5/kf5-kiconthemes"
   depends_on "chigraph/kf5/kf5-kservice"
   depends_on "chigraph/kf5/kf5-sonnet"
-  depends_on "qt5"
+  depends_on "qt"
 
   bottle do
     root_url "https://dl.chigraph.io/dependencies/darwin/brew"

@@ -12,7 +12,7 @@ class Kf5Kxmlgui < Formula
   depends_on "chigraph/kf5/kf5-kglobalaccel"
   depends_on "chigraph/kf5/kf5-ktextwidgets"
   depends_on "chigraph/kf5/kf5-attica"
-  depends_on "qt5"
+  depends_on "qt"
 
   bottle do
     root_url "https://dl.chigraph.io/dependencies/darwin/brew"

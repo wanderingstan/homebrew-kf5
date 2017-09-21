@@ -10,7 +10,7 @@ class Kf5Kmediaplayer < Formula
   depends_on "cmake" => :build
   depends_on "chigraph/kf5/kf5-extra-cmake-modules" => :build
   depends_on "chigraph/kf5/kf5-kparts"
-  depends_on "qt5"
+  depends_on "qt"
 
   bottle do
     root_url "https://dl.chigraph.io/dependencies/darwin/brew"
