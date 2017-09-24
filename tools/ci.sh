@@ -17,7 +17,17 @@ fi
 
 [[ -f "/tmp/kf5_dep_map" ]] && rm /tmp/kf5_dep_map
 
-all_frameworks=(kf5-*.rb)
+
+
+for formula in `ls kf5-*.rb`; do
+  for dep in `grep "depends_on" $formula | awk -F "\"" '{print $2}'`; do
+    echo "${dep/chigraph\/kf5\//} ${formula//\.rb/}" >> /tmp/kf5_dep_map
+  done
+done
+
+tsort /tmp/kf5_dep_map > /tmp/kf5_install_order
+
+(cat /tmp/kf5_install_order | grep kf5 ) | readarray all_frameworks
 len_frameworks=${#all_frameworks[@]}
 
 frameworks_per_page=$(( len_frameworks / KF5_TOTAL_PAGES ))
@@ -29,19 +39,11 @@ if [[ "$KF5_CURRENT_PAGE" -eq $(( KF5_TOTAL_PAGES - 1 )) ]]; then
 	num_frameworks_to_build=$(( len_frameworks - framework_to_start_on ))
 fi
 
-for formula in "${all_frameworks[@]:$framework_to_start_on:$num_frameworks_to_build}"; do
-  for dep in `grep "depends_on" $formula | awk -F "\"" '{print $2}'`; do
-    echo "${dep/chigraph\/kf5\//} ${formula//\.rb/}" >> /tmp/kf5_dep_map
-  done
-done
-
-tsort /tmp/kf5_dep_map > /tmp/kf5_install_order
-
 for deps in `cat /tmp/kf5_install_order | grep -v kf5`; do
   brew install "$@" "${deps}"
 done
 
-for formula in `cat /tmp/kf5_install_order | grep kf5`; do
+for formula in "${all_frameworks[@]:$framework_to_start_on:$num_frameworks_to_build}"; do
   if [ "$formula" == "kf5-kdoctools" ]; then
     cpanm URI
   fi
