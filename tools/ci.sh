@@ -27,7 +27,15 @@ done
 
 tsort /tmp/kf5_dep_map > /tmp/kf5_install_order
 
-readarray all_frameworks < <(cat /tmp/kf5_install_order | grep kf5 )
+readarray all_frameworks < 
+
+declare -a all_frameworks
+let i=0
+while IFS=$'\n' read -r line_data; do
+    all_frameworks[i]="${line_data}" # Populate array.
+    ((++i))
+done < <(cat /tmp/kf5_install_order | grep kf5 )
+
 len_frameworks=${#all_frameworks[@]}
 
 frameworks_per_page=$(( len_frameworks / KF5_TOTAL_PAGES ))
