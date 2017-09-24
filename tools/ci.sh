@@ -27,8 +27,6 @@ done
 
 tsort /tmp/kf5_dep_map > /tmp/kf5_install_order
 
-readarray all_frameworks < 
-
 declare -a all_frameworks
 let i=0
 while IFS=$'\n' read -r line_data; do
