@@ -20,13 +20,13 @@ fi
 all_frameworks=(kf5-*.rb)
 len_frameworks=${#all_frameworks[@]}
 
-frameworks_per_page=$(( "$len_frameworks" / "$KF5_TOTAL_PAGES" ))
-framework_to_start_on=$(( "$frameworks_per_page" * "$KF5_CURRENT_PAGE" ))
+frameworks_per_page=$(( len_frameworks / KF5_TOTAL_PAGES ))
+framework_to_start_on=$(( frameworks_per_page * KF5_CURRENT_PAGE ))
 num_frameworks_to_build="$frameworks_per_page"
 
 # if this is the last page, build all the rest to avoid rounding errors
-if [[ "$KF5_CURRENT_PAGE" -eq $(( "$KF5_TOTAL_PAGES" - 1 )) ]]; then
-	num_frameworks_to_build=$(( "$len_frameworks" - "$framework_to_start_on" ))
+if [[ "$KF5_CURRENT_PAGE" -eq $(( KF5_TOTAL_PAGES - 1 )) ]]; then
+	num_frameworks_to_build=$(( len_frameworks - framework_to_start_on ))
 fi
 
 frameworks_to_build_now=${all_frameworks[@]:$framework_to_start_on:$num_frameworks_to_build}
