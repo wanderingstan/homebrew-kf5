@@ -3,15 +3,12 @@ os: osx
 osx_image: xcode9
 rvm: system
 
-env:
-  - KF5_TOTAL_PAGES=4
-
 matrix:
   include:
-    - env: KF5_CURRENT_PAGE=0
-    - env: KF5_CURRENT_PAGE=1
-    - env: KF5_CURRENT_PAGE=2
-    - env: KF5_CURRENT_PAGE=3
+    - env: KF5_TOTAL_PAGES=4 KF5_CURRENT_PAGE=0
+    - env: KF5_TOTAL_PAGES=4 KF5_CURRENT_PAGE=1
+    - env: KF5_TOTAL_PAGES=4 KF5_CURRENT_PAGE=2
+    - env: KF5_TOTAL_PAGES=4 KF5_CURRENT_PAGE=3
 
 before_install:
   - brew update || brew update
