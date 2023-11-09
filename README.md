@@ -1,3 +1,5 @@
+**NOTE:** This repo is currently out of date. An updated version is at https://github.com/KDE/homebrew-kde
+
 homebrew-kf5
 ============
 
